@@ -121,3 +121,28 @@ Today, I worked on setting up the backend for my project. This involved connecti
 - All changes were committed to the `milestone3` branch with a  commit message.
 
 
+
+# User Management - Milestone 4
+
+## Today's Progress:
+Today, I focused on implementing user management functionalities for the backend. This involved creating a user model, setting up controllers to manage user-related data, and enabling file uploads using Multer. Below are the details of the steps I completed:
+
+
+### 1. **User Model for the  Database**
+   - Inside src I created models folder, inide that I created a file named `user.model.js` to define the user schema.
+
+
+### 2. **Setting Up Controllers to Handle User-related Data**
+   - I created a controllers folder inside the `src` directory.
+   - Inside the controllers folder, I created a file named `user.controller.js` to handle user-related actions.
+   - This file includes functions to:
+     This allows the users to update their personal information like name,email and password and enables new users to add their information.
+
+### 3. **Enabling File Uploads Using Multer**
+   - I installed and configured Multer by the command npm i multer.
+   - I added a middleware to the routes for processing file uploads. The middleware ensures proper validation of file type and size before saving it.
+
+
+
+
+
