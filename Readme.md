@@ -85,3 +85,39 @@ I used bash to run the below command:
 - Basic input validation.
 - Responsive design for mobile and desktop views.
 
+
+
+
+# Milestone 3
+
+## Overview
+Today, I worked on setting up the backend for my project. This involved connecting the application to MongoDB, and implementing error handling. 
+
+## 1. Nodejs server setup and api interface:
+- I initialized an Express server and set up a basic route to handle API requests.
+- The server was configured to serve responses appropriately and form the foundation for further API development.
+
+## 2. Connecting the application to MongoDB to store and manage data
+- I established a connection to MongoDB using Mongoose.
+- The connection string was stored in an `.env` file.
+
+## 3. Build a connection between database and server
+- I integrated the database connection into the server setup.
+- When I start the server, the application now connects to MongoDB.
+
+## 4. Implementing an error handler
+- I created a Error-Handler file to handle unexpected errors.
+
+## Branch Management
+- I switched to a new branch named `milestone3` to keep the changes isolated from the main branch.
+
+## Environment Variables
+- A `.env` file was created to store configuration details like the database URL and server port.
+
+## Folder Structure
+- I organized the backend files into appropriate folders: `src`,`config`, `DB`, and `utils`.
+
+## Version Control
+- All changes were committed to the `milestone3` branch with a  commit message.
+
+
