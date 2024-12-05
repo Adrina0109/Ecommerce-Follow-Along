@@ -13,6 +13,10 @@ app.get("/",(req,res) => {
     return res.send('Welcome to backend');
 });
 
+app.get("/user/squad",(req,res)=>{
+    return res.send({'Good afternoon'});
+});
+app.use('/user', userRouter)
 module.exports = app;
 
 
