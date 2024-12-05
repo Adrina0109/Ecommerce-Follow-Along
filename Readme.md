@@ -122,7 +122,7 @@ Today, I worked on setting up the backend for my project. This involved connecti
 
 
 
-# User Management - Milestone 4
+# Milestone 4
 
 ## Today's Progress:
 Today, I focused on implementing user management functionalities for the backend. This involved creating a user model, setting up controllers to manage user-related data, and enabling file uploads using Multer. Below are the details of the steps I completed:
