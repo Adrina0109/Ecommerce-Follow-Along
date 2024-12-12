@@ -1,4 +1,21 @@
+import { useState } from 'react';
+import {Link} from "react-router-dom";
 function Login() {
+  const [credentials, setCreds] = useState({
+    email: '',
+    password: '',
+  });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    console.log(name, value);
+    setCreds({
+      ...credentials,
+      [name]: value,
+    });
+  };
+  // const handleClickLogin = () => {
+  //   // axios request to backend
+  // };
     return (
       <div className="min-h-screen flex items-center justify-center bg-black text-white">
         <div className="w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
@@ -12,7 +29,12 @@ function Login() {
               </label>
               <input
                 type="email"
+                // autocomplete="email"
+                // required
+                name="email"
                 id="email"
+                value={credentials.email}
+                onChange={handleChange}
                 className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                 placeholder="abc@example.com"
               />
@@ -27,6 +49,7 @@ function Login() {
               <input
                 type="password"
                 id="password"
+                onChange={handleChange}
                 className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                 placeholder="********"
               />
@@ -37,6 +60,8 @@ function Login() {
             >
               Login
             </button>
+            <p className="mt-2 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+            Already have an account? <Link to= {'/signup'} > Signup </Link></p>
           </form>
         </div>
       </div>
