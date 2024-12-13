@@ -18,7 +18,7 @@ const ValidationObject={
             hasUpperCase: /[A-Z]/,
             hasLowerCase: /[a-z]/,
             hasNumbers: /[0-9]/,
-            hasSpecialChar: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
+            hasSpecialChar: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/
     };
         if(password.length <passwordRegex.minLength)
         {
@@ -57,3 +57,5 @@ const ValidationObject={
 };
 
 export default ValidationObject;
+
+// ex
