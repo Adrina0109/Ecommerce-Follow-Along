@@ -140,7 +140,34 @@ Today, I focused on implementing user management functionalities for the backend
 
 ### 3. **Enabling File Uploads Using Multer**
    - I installed and configured Multer by the command npm i multer.
-   - I added a middleware to the routes for processing file uploads. The middleware ensures proper validation of file type and size before saving it.
+   - I added a middleware to the routes for processing file uploads. The middleware ensures proper validation of file type and size before saving  it.
+
+
+
+
+# Milestone:5
+
+## Overview
+In this milestone, I worked on creating a Sign-Up page for users to register by filling out their details. I ensured the design was simple,while implementing form validation to check user inputs before submission.
+
+---
+
+## Today's Progress
+
+### 1. Built the Sign-Up Page UI
+- **Created a basic layout using HTML**:
+  - Added fields for Name, Email, and Password.
+  - Included a submit button for user registration.
+- **Styled the form with CSS**:
+  - Kept the design simple.
+### 2. Implemented Form Validation
+- **Added input validation**:
+  - Checked if the email is in the correct format (example@domain.com).
+  - Ensured the password met security criteria (minimum length).
+- **Validation Benefits**:
+  - Prevented incorrect or incomplete data from being submitted.
+  - Improved user experience by guiding users with error messages.
+
 
 
 
