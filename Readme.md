@@ -171,5 +171,72 @@ In this milestone, I worked on creating a Sign-Up page for users to register by 
 
 
 
+# Milestone:5
+
+## Overview
+In this milestone, I worked on creating a Sign-Up page for users to register by filling out their details. I ensured the design was simple, user-friendly, and effective, while implementing form validation to check user inputs before submission.
+
+
+## Today's Progress
+
+### 1. Built the Sign-Up Page UI
+- **Created a basic layout using HTML**:
+  - Added fields for Name, Email, and Password.
+  - Included a submit button for user registration.
+- **Styled the form with CSS**:
+  - Ensured the design was clean and easy to use.
+  - Applied responsive styling for better accessibility on different devices.
+
+### 2. Implemented Form Validation
+- **Added input validation**:
+  - Checked if the email is in the correct format (e.g., `example@domain.com`).
+  - Ensured the password met security criteria (e.g., minimum length).
+- **Validation Benefits**:
+  - Prevented incorrect or incomplete data from being submitted.
+  - Improved user experience by guiding users with error messages.
+
+
+
+
+# Milestone:6
+
+## Overview
+In this milestone, I worked on implementing email verification for user registration. I ensured that the email address provided by users is valid and secure. For this I used JWT tokens for generating activation links and Nodemailer for sending verification emails.
+
+---
+
+## Today's Progress:
+
+### 1. Generated JWT Tokens for Activation
+- **Created a JWT token during user signup**:
+  - The token contains basic user information like the email address.
+  - Used the token to create a unique activation link.
+
+### 2. Configured Nodemailer to Send Verification Emails
+- **Set up Nodemailer**:
+  - Configured SMTP settings for sending emails.
+- **Sent verification emails**:
+  - The email contains instructions and a clickable link for account activation.
+
+### 3. Created an Endpoint to Verify Tokens
+- **Verified the activation token**:
+  - Implemented an endpoint to handle requests from the activation link.
+  - Validated the token to ensure it is valid and hasn’t expired.
+- **Activated the user account**:
+  - Once verified, the user’s account status is updated to active.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
