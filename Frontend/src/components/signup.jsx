@@ -21,7 +21,7 @@ const Signup = () => {
     // console.log(FormData);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     const NameV = ValidationObject.validateName(formData.name);
     const EmailV = ValidationObject.validateEmail(formData.email);
     const PassV = ValidationObject.validatePass(formData.password);
@@ -39,7 +39,7 @@ const Signup = () => {
         return setFormError(PassV);
     }
 
-    // e.preventDefault();
+    e.preventDefault();
     console.log('Form Data:', formData);
     setFormError('');
   };
