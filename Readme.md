@@ -227,6 +227,23 @@ In this milestone, I worked on implementing email verification for user registra
 
 
 
+# Milestone 7 
+
+## Today's Progress:
+###  1. User Registration:
+- I've implemented a check to verify if the user’s email is already registered in the database. 
+- If the email is already associated with an existing account, the system will prompt the user to log in instead of allowing them to register again.
+
+
+- If the user is not found in the database, I’ve set up functionality to hash their password using bcrypt.js for security.
+- I then create a new user by storing their name, email, and hashed password in the database.
+
+
+### 2. User Login:
+- For login, I’ve ensured that the system checks if the email exists in the database.
+- If the email is found, I validate the provided password.
+  - If the password is correct, I generate a JWT token and store it in a cookie for the user's session.
+  - If the password is incorrect, the system will notify the user that they need to sign up first, as they are not registered.
 
 
 
