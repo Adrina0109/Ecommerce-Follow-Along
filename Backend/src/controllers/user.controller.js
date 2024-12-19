@@ -2,34 +2,13 @@ const ErrorHandler=require('../utils/Error-Handler.js');
 const UserModel = require('../models/user.model.js');
 const transporter = require('../utils/sendmail.js');
 const jwt=require('jsonwebtoken');
+const bcrypt=require('bcrypt');
 require("dotenv").config({
     path:"../config/.env",
 })
 
-const verifyUser = (token)=>{
-    const verify =jwt.verify(token,process.env.SECRET_KEY);
-    if(verify)
-    {
-        return verify;
-    }else{
-        return false;
-    }
-}
 
-const verifyUserController = async (req,res)=> {
-    const {token}= req.params;
-    try{
-        if(verifyUser(token))
-        {
-            return res.status(200).cookie();
-        }
-        return res.status(403).send({message:"token expired"});
-    }
-    catch(er)
-    {
-        return res.status(403).send({message: er.message});
-    }
-}
+
 
 async function CreateUser(req,res){
     const {Name, email, password}= req.body;
@@ -39,7 +18,6 @@ async function CreateUser(req,res){
     });
     if(CheckUserPresent){
  
-        // return ErrorHandler('user not found', 400);
         const error = new ErrorHandler("Already Present in DB", 400);
         
         return res.status(404).send({
@@ -76,5 +54,95 @@ async function CreateUser(req,res){
 const generateToken=(data) =>{
     const token=jwt.sign({id: data._id, name:data.name, email:data.email}, process.env.SECRET_KEY);
 };
+const verifyUser = (token)=>{
+    const verify =jwt.verify(token,process.env.SECRET_KEY);
+    if(verify)
+    {
+        return verify;
+    }else{
+        return false;
+    }
+}
 
-module.exports = {CreateUser, verifyUserController};
+async function verifyUserController (req,res) {
+    const {token}= req.params;
+    try{
+        if(verifyUser(token))
+        {
+            return res
+            .status(200)
+            .cookie('token',token)
+            .json({token, success:true});
+        }
+        return res.status(403).send({message:"token expired"});
+    }
+    catch(er)
+    {
+        return res.status(403).send({message: er.message});
+    }
+}
+
+const signup = async (req, res) => {
+    const { name, email, password } = req.body;
+    try {
+      const checkUserPresentinDB = await UserModel.findOne({ email: email });
+      if (checkUserPresentinDB) {
+        return res.status(403).send({ message: 'User already present' });
+      }
+  
+      bcrypt.hash(password, 10, async function (err, hashedPassword) {
+        try {
+          if (err) {
+            return res.status(403).send({ message: err.message });
+          }
+          await UserModel.create({
+            Name: name,
+            email,
+            password: hashedPassword,
+          });
+  
+          return res.status(201).send({ message: 'User already present in DB' });
+        } catch (er) {
+          return res.status(500).send({ message: er.message });
+        }
+      });
+  
+      //
+    } catch (er) {
+      return res.status(500).send({ message: er.message });
+    }
+  };
+  const login = async (req, res) => {
+    const { email, password } = req.body;
+    try {
+      const checkUserPresentinDB = await UserModel.findOne({ email: email });
+  
+      bcrypt.compare(
+        password,
+        checkUserPresentinDB.password,
+        function (err, result) {
+          
+          if (err) {
+            return res.status(403).send({ message: er.message, success: false });
+          }
+          let data = {
+            id: checkUserPresentinDB._id,
+            email,
+            password: checkUserPresentinDB.password,
+          };
+          const token = generateToken(data);
+  
+          return res
+            .status(200)
+            .cookie('token', token)
+            .send({ message: 'User logged in successfully..', success: true });
+        }
+      );
+  
+    
+    } catch (er) {
+      return res.status(403).send({ message: er.message, success: false });
+    }
+  };
+  
+module.exports = {CreateUser, verifyUserController, signup,login};
