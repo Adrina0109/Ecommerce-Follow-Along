@@ -64,7 +64,7 @@ async function CreateUser(req,res){
     await transporter.sendMail({
         to:"adrinabernadin@gmail.com",
         from:"mary.adrina@kalvium.community",
-        subject:" verfofication email from follow along project",
+        subject:" verification email from follow along project",
         text:"Text",
         html:`<h1> Hello World http://localhost:5173/activation/${token} </> `
     });
