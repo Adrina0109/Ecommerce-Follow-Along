@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ValidationObject from '../../src/validation';
+import ValidationObject from "../../validation.js"
 import {Link} from "react-router-dom";
 const Signup = () => {
   const [formData, setFormData] = useState({
