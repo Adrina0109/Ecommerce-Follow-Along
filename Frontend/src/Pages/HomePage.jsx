@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Card from "../components/ProductCard/Card"
+import Card from "../components/ProductCard/Card";
 function HomePage() {
   const [data, setdata] = useState(
     new Array(20).fill({ title: 'Product Title' })
@@ -11,7 +11,7 @@ function HomePage() {
       <div className="grid grid-cols-3">
         {data.map((ele, index) => {
           return (
-            <div key={index} className="flex justify-center">
+            <div key={index} style={{ margin:'auto'}} className="flex justify-center">
             <Card title={ele.title} Index={index} />
           </div>
           );
