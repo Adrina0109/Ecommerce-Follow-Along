@@ -246,7 +246,49 @@ In this milestone, I worked on implementing email verification for user registra
   - If the password is incorrect, the system will notify the user that they need to sign up first, as they are not registered.
 
 
+# Milestone 8: 
+Building the Product Display
 
+## 1. Reusable Card Component
+
+In this milestone, I created a **Card Component** that can be used across the app to display product details. This component accepts props such as:
+
+- **Product Name**
+- **Product Image**
+- **Product Price**
+
+The card component ensures that all product data is displayed consistently across the homepage.
+
+## 2. Homepage Layout Design
+
+I designed the **Homepage Layout** using **Flexbox** to create a responsive grid. This layout displays multiple product cards neatly and adapts to different screen sizes for a smooth user experience.
+
+---
+
+# Milestone 9:
+Product Form and Data Handling
+
+## 1. Product Form Design and Implementation
+
+I built a **Product Form** where users can input information about a new product, including:
+
+- **Product Name**
+- **Price**
+- **Images (multiple)**
+
+This form enables the user to submit details about new products.
+
+## 2. Enable Multiple Product Images
+
+The form includes functionality to accept multiple images for each product. Users can upload multiple images at once, and these images will be handled and stored accordingly.
+
+## 3. Saving Form Data to the Database
+
+Once the user submits the form, the product data, including the images, is sent to the backend and saved in the database. I implemented an API endpoint using **Express** to handle this data saving process.
+
+## 4. Displaying Saved Products on the Homepage
+
+After the product is successfully saved, I added a feature to **fetch and display saved products** on the homepage. The product details are dynamically loaded from the backend and displayed using the **Card Component** created in Milestone 8.
 
 
 
