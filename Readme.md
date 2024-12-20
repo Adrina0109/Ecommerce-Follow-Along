@@ -246,6 +246,27 @@ In this milestone, I worked on implementing email verification for user registra
   - If the password is incorrect, the system will notify the user that they need to sign up first, as they are not registered.
 
 
+# Milestone 8: 
+Building the Product Display
+
+## 1. Reusable Card Component
+
+In this milestone, I created a **Card Component** that can be used across the app to display product details. This component accepts props such as:
+
+- **Product Name**
+- **Product Image**
+- **Product Price**
+
+The card component ensures that all product data is displayed consistently across the homepage.
+
+### 2. Homepage Layout Design
+
+I designed the **Homepage Layout** using **Flexbox** to create a responsive grid. This layout displays multiple product cards neatly and adapts to different screen sizes for a smooth user experience.
+
+---
+
+
+
 
 
 
