@@ -52,7 +52,8 @@ async function CreateUser(req,res){
 }
 
 const generateToken=(data) =>{
-    const token=jwt.sign({id: data._id, name:data.name, email:data.email}, process.env.SECRET_KEY);
+    const token=jwt.sign({, name:data.name, email:data.email}, process.env.SECRET_KEY);
+    return token;
 };
 const verifyUser = (token)=>{
     const verify =jwt.verify(token,process.env.SECRET_KEY);
@@ -135,7 +136,7 @@ const signup = async (req, res) => {
           return res
             .status(200)
             .cookie('token', token)
-            .send({ message: 'User logged in successfully..', success: true });
+            .send({ message: 'User logged in successfully', success: true });
         }
       );
   
