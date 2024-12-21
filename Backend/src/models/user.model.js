@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    Name:{type:String, require:[true,'Please Enter the Name...']},
+    Name:{type:String, require:[true,'Please Enter the name']},
     email: {
         type:String,
-        require:[true, 'Please Enter Unique Email Adress'],
+        require:[true, 'Please enter an unique email address'],
         unique:[true,'Please enter unique email id']
 
     },
-    password: {type:String, require: [ true,'Please enter the password...']},
+    password: {type:String, require: [ true,'Please enter the password']},
     address:[
         {city : String},
         {country : String},
@@ -30,15 +30,6 @@ const userSchema = new mongoose.Schema({
 ); 
 
 const UserModel=mongoose.model('User', userSchema);
+
 module.exports=UserModel;
 
-
-
-// imp components:
-// nameemail
-// password
-// phonenumer
-// address: [
-// CountQueuingStrategycity
-// resetPasswordToken
-// resetPasswordTime
