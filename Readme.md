@@ -294,6 +294,39 @@ After the product is successfully saved, I added a feature to **fetch and displa
 
 
 
+# Milestone 10
+
+## Overview:
+
+I've created a **Product Schema** using **Mongoose** to structure product data (name, description, price, image URL). I also built a **POST endpoint** to accept product data, validate it, and store it in **MongoDB**.
+
+
+### 1. Product Schema
+
+I defined the structure for product data with the following fields:
+
+- **Name** (required)
+- **Description**
+- **Price** (required, number)
+- **Image URL** (string)
+
+Each field has proper validation to ensure correct data types and required fields.
+
+---
+
+### 2. POST Endpoint
+
+I built a **POST endpoint** to:
+
+- Receive product data.
+- **Validate** the data.
+- **Save** it to MongoDB.
+
+This ensures that new products are added correctly to the database.
+
+This is all that I've done for this milestone.
+
+
 
 
 

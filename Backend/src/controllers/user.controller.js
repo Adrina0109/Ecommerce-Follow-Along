@@ -8,8 +8,6 @@ require("dotenv").config({
 })
 
 
-
-
 async function CreateUser(req,res){
     const {Name, email, password}= req.body;
 
@@ -52,7 +50,7 @@ async function CreateUser(req,res){
 }
 
 const generateToken=(data) =>{
-    const token=jwt.sign({, name:data.name, email:data.email}, process.env.SECRET_KEY);
+    const token=jwt.sign({ name:data.name, email:data.email}, process.env.SECRET_KEY);
     return token;
 };
 const verifyUser = (token)=>{
