@@ -326,6 +326,19 @@ This ensures that new products are added correctly to the database.
 
 This is all that I've done for this milestone.
 
+# Milestone 11: Dynamic Data Display with Product Card Component
+
+## Overview
+In this milestone, I worked on creating an endpoint that sends all the product data from the backend.
+
+## Features
+- **Backend**: Created an endpoint that returns all product data.
+
+## Backend Endpoint
+- Created an endpoint in the backend that sends all the product data to the frontend.
+- The data is fetched from the server and returned as a JSON response.
+
+
 
 
 
