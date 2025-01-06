@@ -341,6 +341,31 @@ In this milestone, I worked on creating an endpoint that sends all the product d
 
 
 
+# Milestone 11: 
+
+## Overview
+In this milestone, I worked on creating an endpoint that sends all the product data from the backend.
+
+## Features
+- **Backend**: Created an endpoint that returns all product data.
+
+## Backend Endpoint
+- Created an endpoint in the backend that sends all the product data to the frontend.
+- The data is fetched from the server and returned as a JSON response.
+
+
+# Milestone 12:
+
+## Overview
+In this milestone, I focused on the backend to create an endpoint that sends all product data along with the associated user email.
+The data is filtered based on certain constraints before being sent to the frontend.
+
+## Features
+- **Backend Endpoint**: Created an endpoint that returns products along with the associated user email.
+- **Data Filtering**: Filtered the data based on specific constraints before sending it to the frontend.
+- **User Email**: The product data includes the user’s email, linking each product to a specific user.
+
+
 
 
 

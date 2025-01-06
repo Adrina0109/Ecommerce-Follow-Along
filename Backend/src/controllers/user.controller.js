@@ -8,7 +8,8 @@ require("dotenv").config({
 })
 
 
-async function CreateUser(req,res){
+async function CreateUser(req,res)
+{
     const {Name, email, password}= req.body;
 
     const CheckUserPresent = await UserModel.findOne({
