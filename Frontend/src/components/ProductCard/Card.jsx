@@ -1,9 +1,11 @@
-function Card({ title, Index }) {
+// eslint-disable-next-line react/prop-types
+function Card({ title, Index, image, description, discountedPrice, originalPrice, rating}) 
+{
     return (
         <div className="w-80 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden transform hover:scale-105">
         <div className="relative">
           <img
-            src="https://img.freepik.com/premium-photo/still-life-wireless-cyberpunk-headphones_23-2151072219.jpg?w=360"
+            src={image}
             alt="Product"
             className="w-full h-56 object-cover rounded-t-xl"
           />
@@ -16,18 +18,19 @@ function Card({ title, Index }) {
             {title} - {Index + 1}
           </h3>
           <p className="text-gray-600 text-sm">
-            Premium wireless headphones with active noise cancellation and 30-hour battery life.
-          </p>
+            {/* Premium wireless headphones with active noise cancellation and 30-hour battery life.
+           */}
+          {description}</p>
       
           <div className="flex items-center space-x-2">
-            <span className="text-sm text-gray-600">(4.5)</span>
+            <span className="text-sm text-gray-600">{rating}</span>
           </div>
       
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-xl font-bold text-gray-900">$199.99</span>
+              <span className="text-xl font-bold text-gray-900">{discountedPrice}</span>
               <span className="ml-2 text-sm text-gray-500 line-through">
-                $249.99
+                {originalPrice}
               </span>
             </div>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105">
