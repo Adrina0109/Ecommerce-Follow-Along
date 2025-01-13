@@ -379,11 +379,11 @@ When the "Delete" button on a product card is clicked, the product ID is sent to
 # Milestone 15: 
 
 ## Overview
-In this milestone, I created a new Navigation (Navbar) component with links to all the pages: HomePage,ProductPage, and Card. 
+In this milestone, I created a new Navigation (Navbar) component with links to all the pages: Home, My-products, Add product, and Cart.
 
 ## Features
 - **Nav Component**: Added a new Nav component with links to all pages.
-- **Page Links**: Created links for Home, HomePage,ProductPage, and Card in the navbar.
+- **Page Links**: Created links for Home, My-products, Add product, and Cart in the navbar.
 - **Smooth Navigation**: Ensured the navigation between pages is seamless and easy.
 
 
