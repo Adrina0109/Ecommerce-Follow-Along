@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-function Card({ title, Index, image, description, discountedPrice, originalPrice, rating, id}) 
+function Card({ title, Index, image, description, discountedPrice, originalPrice, rating, id, handleDelete}) 
 {
     return (
         <div className="w-80 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden transform hover:scale-105">
@@ -42,6 +42,11 @@ function Card({ title, Index, image, description, discountedPrice, originalPrice
             </button>
           </Link>
           </div>
+          <button
+          className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors duration-200"
+          onClick={() => handleDelete(id)}
+        >Delete
+        </button>
         </div>
       </div>
          
