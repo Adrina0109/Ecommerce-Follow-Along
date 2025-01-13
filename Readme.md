@@ -386,6 +386,18 @@ In this milestone, I created a new Navigation (Navbar) component with links to a
 - **Page Links**: Created links for Home, My-products, Add product, and Cart in the navbar.
 - **Smooth Navigation**: Ensured the navigation between pages is seamless and easy.
 
+# Milestone 16:
+
+## Overview
+In this milestone, I created a new page that displays all the product data, along with a single page product details page. 
+Additionally, I created an Image Modal component to allow users to view larger images of the products.
+
+## Features
+- **Product Listing Page**: Created a new page to display all product data in a list.
+- **Single Product Details Page**: Added a page to display detailed information for a single product.
+- **Image Modal Component**: Implemented a modal to display larger images of the products with navigation controls.
+
+
 
 
 
