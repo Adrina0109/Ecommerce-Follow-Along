@@ -376,6 +376,17 @@ When the "Delete" button on a product card is clicked, the product ID is sent to
 - **Backend Endpoint**: Created an endpoint to delete the product from MongoDB by its ID.
 - **Database Deletion**: The product is removed from the database upon a successful request.
 
+# Milestone 15: 
+
+## Overview
+In this milestone, I created a new Navigation (Navbar) component with links to all the pages: HomePage,ProductPage, and Card. 
+
+## Features
+- **Nav Component**: Added a new Nav component with links to all pages.
+- **Page Links**: Created links for Home, HomePage,ProductPage, and Card in the navbar.
+- **Smooth Navigation**: Ensured the navigation between pages is seamless and easy.
+
+
 
 
 
