@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 function Card({ title, Index, image, description, discountedPrice, originalPrice, rating, id, handleDelete}) 
 {

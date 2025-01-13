@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import Card from "../components/ProductCard/Card";
+import Card from "../components/ProductCard/Card.jsx";
 import axios from "axios";
+import {Link} from "react-router-dom"
 function HomePage() {
   const [data, setdata] = useState();
   // new Array(20).fill({ title: 'Product Title' })
   const fetchProduct = async () => {
     const response = await axios.get(
-      "http://localhost:8080/product/get_product"
+      `http://localhost:8080/product/get_product`
     );
     setdata(response.data.data);
-    console.log(response);
   };
   useEffect(() => {
     console.log("clicked");
@@ -37,9 +37,10 @@ function HomePage() {
               style={{ margin: "auto" }}
               className="flex justify-center"
             >
+            <Link to={`/product-details/${ele._id}`}>
               <Card
                 title={ele.title}
-                image={ele.images[0] ? ele.images[0] : "Product image is missing"}
+                image={ele.images ? ele.images : "Product image is missing"}
                 Index={index}
                 description={ele.description}
                 originalPrice={ele.originalPrice}
@@ -47,7 +48,8 @@ function HomePage() {
                 rating={ele.rating}
                 id={ele._id}
                 handleDelete={handleDelete}
-              />
+                />
+                </Link>
             </div>
           );
         })}

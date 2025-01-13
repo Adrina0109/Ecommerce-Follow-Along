@@ -13,6 +13,7 @@ const createProductController = async (req, res) => {
     quantity,
     category,
   } = req.body;
+  console.log()
 
   try {
     const arrayImage = req.files.map(async (singleFile, index) => {

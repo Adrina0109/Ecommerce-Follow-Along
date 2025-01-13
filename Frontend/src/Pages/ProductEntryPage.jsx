@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Upload } from 'lucide-react';
 import axios from 'axios';
@@ -35,7 +36,7 @@ function ProductEntryPage()
     console.log(formData);
   };
   
-  const handleSubmit = (e) => 
+  const handleSubmit = async (e) => 
 {
     e.preventDefault();
     console.log(formData);
@@ -73,16 +74,16 @@ function ProductEntryPage()
     formDataBody.append('rating', rating);
 
     Images.map((ele) => {
-      formDataBody.append('filepath', ele);
+      formDataBody.append('files', ele);
     });
 
     console.log(formDataBody);
 
     
-    axios.post('http://localhost:8080/product/create-product', formData, 
+    await axios.post('http://localhost:8080/product/create-product', formDataBody, 
     {
       headers: {
-        'Content-Type': 'multi-part/form-data',
+        'Content-Type': 'multipart/form-data',
       },
     });
   };
