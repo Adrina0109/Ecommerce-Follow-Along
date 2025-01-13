@@ -99,7 +99,7 @@ function UpdateForm()
       return er;
     });
 
-  for (let pair of formDataBody.entries()) {
+  for (let pair of requestdata.entries()) {
     if (pair[1] instanceof File) {
       console.log(
         `${pair[0]}: File - ${pair[1].name}, ${pair[1].type}, ${pair[1].size} bytes`
