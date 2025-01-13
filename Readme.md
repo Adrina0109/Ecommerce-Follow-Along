@@ -326,20 +326,6 @@ This ensures that new products are added correctly to the database.
 
 This is all that I've done for this milestone.
 
-# Milestone 11: 
-
-## Overview
-In this milestone, I worked on creating an endpoint that sends all the product data from the backend.
-
-## Features
-- **Backend**: Created an endpoint that returns all product data.
-
-## Backend Endpoint
-- Created an endpoint in the backend that sends all the product data to the frontend.
-- The data is fetched from the server and returned as a JSON response.
-
-
-
 
 # Milestone 11: 
 
@@ -365,6 +351,17 @@ The data is filtered based on certain constraints before being sent to the front
 - **Data Filtering**: Filtered the data based on specific constraints before sending it to the frontend.
 - **User Email**: The product data includes the user’s email, linking each product to a specific user.
 
+
+# Milestone 13: 
+
+## Overview
+In this milestone, I added an "Edit" feature that allows users to update existing product data. The backend endpoint updates the product in MongoDB, and on the frontend, users can click an "Update" button to fill a form with the product's data, edit it, and save the changes.
+
+## Features
+- **Update Button**: Added an "Update" button to each product card.
+- **Auto-Fill Form**: When clicked, a form is filled with the current product data for editing.
+- **Backend Endpoint**: Created an endpoint to handle updating product details in MongoDB.
+- **Database Update**: Changes are saved to the database when the user submits the form.
 
 
 
