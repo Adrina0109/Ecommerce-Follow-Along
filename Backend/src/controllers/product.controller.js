@@ -67,4 +67,68 @@ const getProductDataController = async (req, res) => {
   }
 };
 
-module.exports = { createProductController, getProductDataController };
+
+const updateProduct=async(req,res)=>{
+  const{
+    title,
+    description,
+    rating,
+    discountedPrice,
+    originalPrice,
+    quantity,
+    category,
+  }=req.body;
+  const {id}=req.params;
+  try{
+    const checkIfProductExist= await ProductModel.findOne({_id:id})
+    if(!checkIfProductExist)
+      return res.status(404).send({messag: "Product not found"
+        })
+    const arrayImage=req.files.map((singleFile,index)=>{
+      return cloudinary.uploader
+        .upload(singleFile.path,{
+          folder:"uploads"
+        })
+        .then((result)=>{
+          fs.unlinkedSync(singleFile.path);
+          return result.url;
+        })
+      })
+      const ImageData= await Promise.all(arrayImage);
+      const findAndUpdate= await ProductModel.findByIdAndUpdate(
+      { _id:id},
+      {
+        title,
+          description,
+          rating,
+          discountedPrice,
+          originalPrice,
+          quantity,
+          category,
+          images:ImageData
+      },
+      {
+        new:true,
+      })
+      return res.status(201).send({message:"Updated successfully", success: true, UpdatedResult: findAndUpdate,})
+    }
+  catch(er){
+    res.status(500).send({messag:er.message, successful: false})
+  }
+};
+const getSingleProductDocument=async(req,res)=>{
+  const {id}= req.params;
+  try{
+    const data =await ProductModel.findOne({_id:id});
+    console.log(data);
+    if(!data){
+      return res.status(404).send({Message : "Product not found"})
+    }
+    return res.status(200).send({message: "Product successfully fetched", data, success: true})
+  }
+  catch(er){
+  }
+}
+
+
+module.exports = { createProductController, getProductDataController,updateProduct,getSingleProductDocument}

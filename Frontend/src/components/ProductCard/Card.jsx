@@ -1,5 +1,5 @@
-// eslint-disable-next-line react/prop-types
-function Card({ title, Index, image, description, discountedPrice, originalPrice, rating}) 
+import { Link } from 'react-router-dom';
+function Card({ title, Index, image, description, discountedPrice, originalPrice, rating, id}) 
 {
     return (
         <div className="w-80 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden transform hover:scale-105">
@@ -36,6 +36,11 @@ function Card({ title, Index, image, description, discountedPrice, originalPrice
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105">
               Add to cart
             </button>
+            <Link to={`/update-form/${id}`}>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors duration-200">
+              Update
+            </button>
+          </Link>
           </div>
         </div>
       </div>

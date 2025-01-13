@@ -77,6 +77,8 @@ function ProductEntryPage()
     });
 
     console.log(formDataBody);
+
+    
     axios.post('http://localhost:8080/product/create-product', formData, 
     {
       headers: {
