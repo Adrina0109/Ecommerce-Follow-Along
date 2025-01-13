@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "../components/ProductCard/Card";
 import axios from "axios";
 function HomePage() {
-  const [data, setdata] = useState([]);
+  const [data, setdata] = useState();
   // new Array(20).fill({ title: 'Product Title' })
   const fetchProduct = async () => {
     const response = await axios.get(
@@ -26,7 +26,7 @@ function HomePage() {
     <>
       <h1 className="text-center">Home Page for Follow along</h1>
       <div className="grid grid-cols-3">
-        {data.map((ele, index) => {
+        {data?.map((ele, index) => {
           return (
             <div
               key={index}
@@ -41,6 +41,7 @@ function HomePage() {
                 originalPrice={ele.originalPrice}
                 discountedPrice={ele.discountedPrice}
                 rating={ele.rating}
+                id={ele._id}
               />
             </div>
           );
