@@ -355,13 +355,26 @@ The data is filtered based on certain constraints before being sent to the front
 # Milestone 13: 
 
 ## Overview
-In this milestone, I added an "Edit" feature that allows users to update existing product data. The backend endpoint updates the product in MongoDB, and on the frontend, users can click an "Update" button to fill a form with the product's data, edit it, and save the changes.
+In this milestone, I added an "Edit" feature that allows users to update existing product data. 
+The backend endpoint updates the product in MongoDB, and on the frontend, users can click an "Update" button to fill a form with the product's data, edit it, and save the changes.
 
 ## Features
 - **Update Button**: Added an "Update" button to each product card.
 - **Auto-Fill Form**: When clicked, a form is filled with the current product data for editing.
 - **Backend Endpoint**: Created an endpoint to handle updating product details in MongoDB.
 - **Database Update**: Changes are saved to the database when the user submits the form.
+
+# Milestone 14: 
+
+## Overview
+In this milestone, I added a "Delete" feature that allows users to remove products from MongoDB. 
+When the "Delete" button on a product card is clicked, the product ID is sent to the server to delete the product.
+
+## Features
+- **Delete Button**: Added a "Delete" button to each product card.
+- **Frontend**: When clicked, the product ID is sent to the server to request deletion.
+- **Backend Endpoint**: Created an endpoint to delete the product from MongoDB by its ID.
+- **Database Deletion**: The product is removed from the database upon a successful request.
 
 
 
