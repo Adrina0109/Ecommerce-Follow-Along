@@ -130,5 +130,26 @@ const getSingleProductDocument=async(req,res)=>{
   }
 }
 
+const deleteProduct = async (req, res) => {
+  const { id } = req.params;
+  console.log('id', id);
+  try {
+    const data = await ProductModel.findOne({ _id: id });
+    console.log(data);
+    if (!data) {
+      return res.status(404).send({ Message: 'Product Not Found' });
+    }
 
-module.exports = { createProductController, getProductDataController,updateProduct,getSingleProductDocument}
+    await ProductModel.findByIdAndDelete({ _id: id });
+    const newData = await ProductModel.find();
+    return res.status(200).send({
+      message: 'Product Successfully fetched',
+      data: newData,
+      success: true,
+    });
+  } catch (er) {
+    return res.status(500).send({ message: er.message, success: false });
+  }
+};
+
+module.exports = { createProductController, getProductDataController,updateProduct,getSingleProductDocument, deleteProduct}
