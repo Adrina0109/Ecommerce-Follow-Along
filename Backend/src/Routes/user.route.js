@@ -14,6 +14,6 @@ const router=express.Router();
 router.post('/create-user', upload.single('file'), CreateUser);
 router.get('/activation/:token', verifyUserController);
 
-router.post('/signup',signup);
+router.post('/signup', upload.single("file"),signup);
 router.post('/login',login);
 module.exports = router;

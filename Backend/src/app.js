@@ -1,6 +1,7 @@
 const express = require("express");
 const userRouter = require("./Routes/user.route.js");
 const productRouter = require("./Routes/products.route.js");
+const cookieParser= require("cookie-parser")
 const cors = require("cors");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
@@ -9,6 +10,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 }
 
 const app = express();
+app.use(cookieParser())
 app.use(express.json());
 app.use(cors());
 app.get("/", (req, res) => {

@@ -4,7 +4,7 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import ProductEntryPage from './Pages/ProductEntryPage';
 import UpdateForm from './Pages/updateForm';
-import Navbar from "./components/navBar/navbar"
+import Navbar from './components/navBarFol/navbar';
 import SinglePageProduct from './Pages/SingleProductPage';
 function App(){
   return (

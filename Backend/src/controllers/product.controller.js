@@ -37,6 +37,7 @@ const createProductController = async (req, res) => {
       quantity,
       category,
       images: dataImages,
+      UserEmail: req.userEmailAddress,
     });
 
     return res.status(201).send({

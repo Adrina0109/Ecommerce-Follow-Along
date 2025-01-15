@@ -15,6 +15,7 @@ const SchemaObject =
       default: 'https://img.freepik.com/premium-photo/still-life-wireless-cyberpunk-headphones_23-2151072219.jpg?w=360',
     },
   ],
+  userEmail: { type: String },
 };
 const productSchema = new mongoose.Schema(SchemaObject, { versionKey: false });
 const ProductModel = mongoose.model('Product', productSchema);

@@ -1,10 +1,12 @@
+import axios from "axios";
 import { useState } from 'react';
-import {Link} from "react-router-dom";
+import {Link,useNavigate} from "react-router-dom";
 function Login() {
   const [credentials, setCreds] = useState({
     email: '',
     password: '',
   });
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(name, value);
@@ -13,16 +15,21 @@ function Login() {
       [name]: value,
     });
   };
-  // const handleClickLogin = () => {
-  //   // axios request to backend
-  // };
+
+
+  const handleClickLogin = async () => {
+  const response= await axios.post("http://localhost:8080/user/login");
+  localStorage.setItem("token", response.data.token);
+  navigate("/");
+
+  };
     return (
       <div className="min-h-screen flex items-center justify-center bg-black text-white">
         <div className="w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
           <h1 className="text-2xl font-bold mb-6 text-center text-white">
             Login Page
           </h1>
-          <form action="" className="space-y-4">
+          <form className="space-y-6" onSubmit={handleClickLogin}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-2">
                 Enter Email:

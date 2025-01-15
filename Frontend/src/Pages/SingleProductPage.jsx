@@ -2,7 +2,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import {Heart, ShoppingBag, Star} from "lucide-react";
 import { useParams } from "react-router-dom";
-import ImageModal from "./imageModel.jsx"
+import ImageModal from "../components/ImageModal/imageModel.jsx"
 
 function SinglePageProduct() 
 {

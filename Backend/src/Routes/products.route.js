@@ -8,11 +8,13 @@ const {
   getSingleProductDocument,
   deleteProduct,
 } = require('../controllers/product.controller.js');
+const {verifyUser}=require('../controllers/user.controller.js')
 const router = express.Router();
 
 router.post(
   '/create-product',
   upload.array('files', 5),
+  verifyUser,
   createProductController
 );
 
