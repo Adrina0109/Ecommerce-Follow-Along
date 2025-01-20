@@ -412,6 +412,8 @@ In this milestone, I created a new page that displays all the product data, alon
 - **Single Product Details Page**: Added a page to display detailed information for a single product.
 - **Image Modal Component**: Implemented a modal to display larger images of the products with navigation controls.
 
+
+
 # Milestone 17
 
 ## Overview
@@ -423,6 +425,21 @@ In this milestone, I focused on implementing the Cart functionality for the appl
 - **Cart Controller**: Implemented the controller functions:
   - `get`: Fetches the current user's cart data.
   - `addToCart`: Allows the user to add new products to the cart.
+
+
+
+
+# Milestone 18
+
+## Overview
+In this milestone, I implemented the backend functionality for the cart page by adding essential endpoints. Specifically, I created an endpoint for the cart page itself and another endpoint to fetch the products currently stored in the cart for a specific user.
+
+## Features
+- **Cart Page Endpoint**: Developed a backend route that serves the cart page, providing a foundation for users to interact with their cart.
+- **Get Cart Products Endpoint**: Implemented an endpoint that fetches all the products in the user's cart, enabling the user to view and manage the items they have added.
+
+These endpoints facilitate the cart management features in the application, enabling users to access their cart data seamlessly.
+
 
 
 
