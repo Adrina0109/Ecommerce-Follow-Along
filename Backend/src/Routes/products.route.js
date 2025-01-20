@@ -8,7 +8,7 @@ const {
   getSingleProductDocument,
   deleteProduct,
 } = require('../controllers/product.controller.js');
-const {verifyUser}=require('../controllers/user.controller.js')
+const verifyUser= require("../Middlewares/jwt-verify.js");
 const router = express.Router();
 
 router.post(
