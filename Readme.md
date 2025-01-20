@@ -412,5 +412,19 @@ In this milestone, I created a new page that displays all the product data, alon
 - **Single Product Details Page**: Added a page to display detailed information for a single product.
 - **Image Modal Component**: Implemented a modal to display larger images of the products with navigation controls.
 
+# Milestone 17
+
+## Overview
+In this milestone, I focused on implementing the Cart functionality for the application. This involved creating the **Cart Schema** to store cart data, developing the **Cart Route** for handling API requests related to the cart, and building the **Cart Controller** with `get` and `addToCart` methods to manage cart items.
+
+## Features
+- **Cart Schema**: Created the Cart schema to define the structure of the cart data and ensure proper data storage.
+- **Cart Route**: Developed the Cart route to handle the API endpoints related to cart operations, including fetching and adding items to the cart.
+- **Cart Controller**: Implemented the controller functions:
+  - `get`: Fetches the current user's cart data.
+  - `addToCart`: Allows the user to add new products to the cart.
+
+
+
 
 

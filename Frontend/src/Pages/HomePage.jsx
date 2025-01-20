@@ -7,7 +7,7 @@ function HomePage() {
   // new Array(20).fill({ title: 'Product Title' })
   const fetchProduct = async () => {
     const response = await axios.get(
-      `http://localhost:8080/product/get_product`
+      'http://localhost:8080/product/get_product'
     );
     setdata(response.data.data);
   };

@@ -17,10 +17,12 @@ function Login() {
   };
 
 
-  const handleClickLogin = async () => {
-  const response= await axios.post("http://localhost:8080/user/login");
-  localStorage.setItem("token", response.data.token);
-  navigate("/");
+  const handleClickLogin = async (e) => {
+    e.preventDefault();
+    const response= await axios.post("http://localhost:8080/user/login", credentials);
+    localStorage.setItem("token", response.data.token);
+    console.log(response)
+    navigate("/");
 
   };
     return (
