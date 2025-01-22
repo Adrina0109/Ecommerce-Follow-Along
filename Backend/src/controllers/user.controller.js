@@ -6,6 +6,7 @@ const jwt=require('jsonwebtoken');
 const bcrypt=require('bcrypt');
 const cloudinary = require('../utils/cloudinary.js');
 const fs  = require('fs');
+const {default: mongoose} = require ('mongoose');
 require("dotenv").config({
     path:"../config/.env",
 })
@@ -166,4 +167,21 @@ const signup = async (req, res) => {
     }
   };
   
-module.exports = {CreateUser, verifyUserController, signup,login,verifyUser};
+  const getUserData= async(req,res)=>{
+    const userId = req.UserId;
+    try{
+      if(!mongoose.Types.ObjectId.isValid(userId)){
+        return res.status(401).send({message:'Send Valid User Id'});
+      }
+      const checkUserPresentinDB= await UserModel.findOne({ _id: userId});
+      if (!checkUserPresentinDB){
+        return res.status(401).send({message: "Please signup, user not present"});
+      }
+      return res.status(200).send({data: checkUserPresentinDB})
+    }
+    catch(er){
+      return res.status(500).send({message: er.message});
+    }
+  };
+  
+module.exports = {CreateUser, verifyUserController, signup,login,getUserData};

@@ -452,6 +452,20 @@ In this milestone, I focused on implementing the **Cart UI** for the application
 - **Fetching Cart Details**: Integrated the frontend with the backend to fetch the user's cart data through an API request. The cart data is displayed dynamically in the Cart UI.
 - **/cart Endpoint**: Set up the `/cart` endpoint so users can easily navigate to the cart page and view the details of the products they have added.
 
+# Milestone 20
+
+## Overview
+In this milestone, I focused on creating a user profile page with relevant details. This includes the development of a backend endpoint for fetching the user’s profile data, as well as a frontend component to display the user’s profile information.
+
+## Achievements
+- **Profile Page Endpoint**: Implemented the `/profile` endpoint to retrieve and display the authenticated user’s profile data.
+- **ProfileCard Component**: Created the `ProfileCard.jsx` component, which displays the following user details:
+  - **Profile Photo**: User's profile image.
+  - **Username**: The username of the user.
+  - **Email ID**: The email address associated with the user's account.
+  - **Role**: The user's role (e.g., Admin, User).
+  - **Address**: The user's address details.
+  
 
 
 
