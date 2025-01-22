@@ -440,6 +440,20 @@ In this milestone, I implemented the backend functionality for the cart page by 
 
 These endpoints facilitate the cart management features in the application, enabling users to access their cart data seamlessly.
 
+# Milestone 19
+
+## Overview  
+In this milestone, I focused on implementing the **Cart UI** for the application, which allows users to view their cart details. This involved creating the **CartPage.jsx** and **CartCard** components in the frontend to display cart items, and setting up the necessary functionality to fetch cart data from the backend.
+
+## Features  
+- **Cart UI**: Developed the user interface for the Cart page where users can view all items added to their cart.
+- **CartPage.jsx**: Created the `CartPage.jsx` component to render the entire cart page layout and display a list of cart items.
+- **CartCard**: Designed the `CartCard` component to represent individual cart items with relevant details such as product name, image, and price.
+- **Fetching Cart Details**: Integrated the frontend with the backend to fetch the user's cart data through an API request. The cart data is displayed dynamically in the Cart UI.
+- **/cart Endpoint**: Set up the `/cart` endpoint so users can easily navigate to the cart page and view the details of the products they have added.
+
+
+
 
 
 
