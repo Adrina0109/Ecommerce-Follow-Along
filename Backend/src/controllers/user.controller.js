@@ -171,11 +171,11 @@ const signup = async (req, res) => {
     const userId = req.UserId;
     try{
       if(!mongoose.Types.ObjectId.isValid(userId)){
-        return res.status(401).send({message:'Send Valid User Id'});
+        return res.status(401).send({message:'Send valid user id'});
       }
       const checkUserPresentinDB= await UserModel.findOne({ _id: userId});
       if (!checkUserPresentinDB){
-        return res.status(401).send({message: "Please signup, user not present"});
+        return res.status(401).send({message: "Please Signup, user not present"});
       }
       return res.status(200).send({data: checkUserPresentinDB})
     }
@@ -183,5 +183,41 @@ const signup = async (req, res) => {
       return res.status(500).send({message: er.message});
     }
   };
+
+  const AddAddressController = async (req, res) => {
+    const userId = req.UserId;
+    const { city, 
+      country, 
+      address1, 
+      address2, 
+      zipCode, 
+      addressType } = req.body;
+    try {
+      const userFindOne = await UserModel.findOne({ _id: userId });
+      if (!userFindOne) {
+        return res
+          .status(404)
+          .send({ message: 'User not found', success: false });
+      }
   
-module.exports = {CreateUser, verifyUserController, signup,login,getUserData};
+      const userAddress = {
+        city,
+        country,
+        address1,
+        address2,
+        zipCode,
+        addressType,
+      };
+  
+      userFindOne.address.push(userAddress);
+      const response = await userFindOne.save();
+  
+      return res
+        .status(201)
+        .send({ message: 'User address is added', success: true, response });
+    } catch (er) {
+      return res.status(500).send({ message: er.message });
+    }
+  };
+  
+module.exports = {CreateUser, verifyUserController, signup,login,getUserData,AddAddressController,};
