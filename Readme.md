@@ -468,6 +468,18 @@ In this milestone, I focused on creating a user profile page with relevant detai
   
 
 
+# Milestone 21
+## Overview
+In this milestone we had to create an user interface for displaying the address. The goal is to allow users to input and store their address information in a structured way, including city, country, address lines, and address type.
+
+### Features  
+- **Address Page UI**: Developed the user interface for the address page where users can input their address details such as city, country, address1, address2, address3, and address type.
+- **AddressPage.jsx**: Created the `AddressPage.jsx` component to render the Address page layout and allow users to fill in and submit their address information.
+- **/address Endpoint**: Set up the `/address` endpoint to handle displaying the Address page and receiving user input for address details.
+
+
+
+
 
 
 
