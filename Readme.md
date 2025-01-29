@@ -504,6 +504,23 @@ In this milestone, I focused on integrating the functionality to select and disp
   Integrated the selected address into the checkout flow, ensuring it is visible and ready for the order process.
 
 
+# Milestone 24
+
+## Overview  
+In this milestone, I created the `OrderConfirmation.jsx` component to display the user's orders and their total value after completing the checkout process. The goal was to provide users with a summary of their orders and allow them to see the total value once they proceed from the cart to the order confirmation.
+
+### Features  
+- **Order Confirmation Page**:  
+  Created the `OrderConfirmation.jsx` component that displays a list of all the orders made by the user.
+
+- **Order Summary**:  
+  The page includes a detailed view of each order, showing the items purchased, quantities, and pricing information.
+
+- **Total Value Calculation**:  
+  Implemented logic to calculate and display the total value of the user's order, including item prices, taxes, and any applicable discounts.
+
+- **Post-Checkout Navigation**:  
+  Once users complete the checkout process, they are redirected to the order confirmation page where they can view their order details and total.
 
 
 
