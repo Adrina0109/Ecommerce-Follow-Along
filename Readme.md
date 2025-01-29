@@ -478,6 +478,18 @@ In this milestone we had to create an user interface for displaying the address.
 - **/address Endpoint**: Set up the `/address` endpoint to handle displaying the Address page and receiving user input for address details.
 
 
+# Milestone 22  
+
+## Overview  
+In this milestone, I focused on handling address submission and storing multiple addresses for each user in the database. The goal was to ensure that the address data received from the frontend is correctly processed and stored in a user-specific array within the database.
+
+### Features  
+- **Address Submission Handling**: Implemented functionality to receive address data from the frontend via an HTTP POST request.
+- **Database Integration**: Developed logic to add the received address data to the user document in the database, specifically inside an array that holds multiple addresses.
+- **Address Array**: Enhanced the user model to support storing an array of addresses, allowing users to have multiple addresses in their profile. Each address will be stored with details such as city, country, address lines, and address type.
+
+
+
 
 
 
