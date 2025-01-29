@@ -488,6 +488,23 @@ In this milestone, I focused on handling address submission and storing multiple
 - **Database Integration**: Developed logic to add the received address data to the user document in the database, specifically inside an array that holds multiple addresses.
 - **Address Array**: Enhanced the user model to support storing an array of addresses, allowing users to have multiple addresses in their profile. Each address will be stored with details such as city, country, address lines, and address type.
 
+# Milestone 23
+
+## Overview  
+In this milestone, I focused on integrating the functionality to select and display the user's address during the checkout process on the cart page. The goal was to allow users to choose an address from their stored addresses and display it before finalizing the checkout.
+
+### Features  
+- **Address Selection**:  
+  Implemented functionality to display the stored addresses and allow users to select one for checkout.
+  
+- **Address Display**:  
+  Once an address is selected, it is displayed on the cart page before proceeding to the checkout.
+
+- **Checkout Integration**:  
+  Integrated the selected address into the checkout flow, ensuring it is visible and ready for the order process.
+
+
+
 
 
 

@@ -70,7 +70,7 @@ function Login() {
               Login
             </button>
             <p className="mt-2 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 shadow-sm">
-            Already have an account? <Link to= {'/signup'} > Signup </Link></p>
+            Don't have an account? <Link to= {'/signup'} > Signup </Link></p>
           </form>
         </div>
       </div>

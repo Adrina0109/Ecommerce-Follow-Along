@@ -1,4 +1,5 @@
 const express=require('express');
+const multer= require('multer');
 const {
     CreateUser,
     verifyUserController,
@@ -6,6 +7,8 @@ const {
     login,
     getUserData,
     AddAddressController,
+    DeleteAddressController,
+    GetAddressController,
 } = require('../controllers/user.controller.js');
 const jwt = require('jsonwebtoken');
 const verifyUser= require("../Middlewares/jwt-verify.js")
@@ -21,4 +24,6 @@ router.post('/signup', upload.single("file"),signup);
 router.post('/login',login);
 router.get("/user-data", verifyUser, getUserData)
 router.post('/add-address', verifyUser, AddAddressController);
+router.delete("/delete-address/:id", verifyUser, DeleteAddressController);
+router.get("/get-addresses", verifyUser, GetAddressController);
 module.exports = router;

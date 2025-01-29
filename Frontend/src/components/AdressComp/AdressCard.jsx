@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 const AddressCard = () => {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
@@ -7,18 +8,28 @@ const AddressCard = () => {
   const [add2, setAdd2] = useState('');
   const [zipCode, setZipCode] = useState('');
   const [addressType, setAddressType] = useState('');
-
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const addressData = {
       city,
       country,
-      address1,
-      address2,
+      address1: add1,
+      address2: add2,
       zipCode,
       addressType,
     };
     console.log(addressData);
+    const token = localStorage.getItem('token');
+    if (!token) {
+      return alert('Token missing');
+    }
+
+    const response = await axios.post(
+      `http://localhost:8080/user/add-address?token=${token}`,
+      addressData
+    );
+    navigate('/profile');
   };
 
   return (
@@ -60,7 +71,6 @@ const AddressCard = () => {
           />
           <div className="grid grid-cols-2 gap-4">
             <input
-              type="text"
               placeholder="Zip Code"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
