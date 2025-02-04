@@ -3,6 +3,7 @@ const userRouter = require("./Routes/user.route.js");
 const productRouter = require("./Routes/products.route.js");
 const cookieParser= require("cookie-parser");
 const cartRouter= require("./Routes/cart.route.js")
+const OrderRouter=require("../src/Routes/order.route.js")
 const cors = require("cors");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
@@ -21,6 +22,8 @@ app.get("/", (req, res) => {
 app.use("/user", userRouter);
 app.use("/product", productRouter);
 app.use("/cart", cartRouter)
+app.use('/orders',OrderRouter)
+
 module.exports = app;
 
 // const express= require('express');

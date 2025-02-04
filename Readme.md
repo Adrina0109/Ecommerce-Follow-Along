@@ -542,6 +542,26 @@ In this milestone, I worked on handling order processing by receiving product de
   - Stored the order details in the MongoDB `orders` collection.  
 
 
+# Milestone 25  
+
+## Overview  
+In this milestone, I worked on handling order processing by receiving product details, user information, and address details. The goal was to create separate orders for each product while using the same address and provide an endpoint to retrieve user-specific orders.  
+
+### Features  
+
+- **User Identification**  
+  - Retrieved the user `_id` based on their email.  
+
+- **Order Creation**  
+  - Created separate orders for each product while ensuring they use the same address.  
+
+- **Order Storage**  
+  - Stored the order details in the MongoDB `orders` collection.  
+
+- **Order Retrieval**  
+  - Provided an endpoint to retrieve all orders for a specific user.  
+
+
 
 
 
