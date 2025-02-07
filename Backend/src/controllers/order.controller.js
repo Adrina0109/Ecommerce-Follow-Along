@@ -57,11 +57,44 @@ async function GetuserOrders(req,res) {
         }
 
         const orders = await OrderModel.find({user: userId, orderStatus: { $ne: 'Cancelled' },
-          }).populate('orderItems');
+          },
+          { orderStatus: 1, orderItems: 1 }
+        ).populate('orderItems');
         return res.status(200).send({message:'Data Successfully fetched',success:true,orders})
     }catch(err){
         return res.status(500).send({ message: err.message, success: false })
     }
 }
+async function CancelOrder(req, res) {
+    const userId = req.UserId;
+    const orderId = req.query.orderId;
+    try {
+      if (!mongoose.Types.ObjectId.isValid(userId)) {
+        return res
+          .status(400)
+          .send({ message: 'InValid User Id', success: false });
+      }
+      if (!mongoose.Types.ObjectId.isValid(orderId)) {
+        return res
+          .status(400)
+          .send({ message: 'InValid Order Id', success: false });
+      }
+  
+      await OrderModel.findByIdAndUpdate(
+        { _id: orderId },
+        {
+          orderStatus: 'Cancelled',
+        },
+        {
+          new: true,
+        }
+      );
+      return res
+        .status(200)
+        .send({ message: 'Order cancelled successfully', success: true });
+    } catch (er) {
+      return res.status(500).send({ message: er.message, success: false });
+    }
+  }
 
-module.exports={CreateOrder,GetuserOrders}
+module.exports={CreateOrder,GetuserOrders,CancelOrder}

@@ -597,6 +597,29 @@ This module focuses on handling order processing by receiving product details, u
 **Endpoint:** `GET /api/order-history`  
 - Fetches all order items along with their processing status.  
 
+# Milestone 28
+
+## Overview  
+In this milestone, I worked on handling order processing by receiving product details, user information, and address details. The goal was to create separate orders for each product while using the same address and provide an endpoint to retrieve user-specific orders.  
+
+### Features  
+
+- **User Identification**  
+  - Retrieved the user `_id` based on their email.  
+
+- **Order Creation**  
+  - Created separate orders for each product while ensuring they use the same address.  
+
+- **Order Storage**  
+  - Stored the order details in the MongoDB `orders` collection.  
+
+- **Order Retrieval**  
+  - Provided an endpoint to retrieve all orders for a specific user.  
+
+- **Order Cancellation**  
+  - Added a cancel button near each order item.  
+  - Users can cancel an order when required.  
+  - Integrated functionality to update the order status accordingly.  
 
 
 
