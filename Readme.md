@@ -542,7 +542,7 @@ In this milestone, I worked on handling order processing by receiving product de
   - Stored the order details in the MongoDB `orders` collection.  
 
 
-# Milestone 25  
+# Milestone 26
 
 ## Overview  
 In this milestone, I worked on handling order processing by receiving product details, user information, and address details. The goal was to create separate orders for each product while using the same address and provide an endpoint to retrieve user-specific orders.  
@@ -560,6 +560,42 @@ In this milestone, I worked on handling order processing by receiving product de
 
 - **Order Retrieval**  
   - Provided an endpoint to retrieve all orders for a specific user.  
+
+
+
+
+# Milestone 27
+
+## Overview  
+This module focuses on handling order processing by receiving product details, user information, and address details. Each order is processed separately per product while maintaining a common shipping address. Additionally, an `order-history` endpoint has been implemented to display all order items along with their processing status.  
+
+## Features  
+
+### User Identification  
+- Retrieved the user `_id` based on their email.  
+
+### Order Creation  
+- Created separate orders for each product while ensuring they use the same address.  
+
+### Order Storage  
+- Stored order details in the MongoDB `orders` collection.  
+
+### Order Retrieval  
+- Provided an endpoint to retrieve all orders for a specific user.  
+
+### Order History  
+- Implemented an `order-history` endpoint to fetch all order items.  
+- Displayed the processing status of each order item.  
+
+## API Endpoints  
+
+### Retrieve User Orders  
+**Endpoint:** `GET /api/orders`  
+- Returns all orders for the authenticated user.  
+
+### Order History  
+**Endpoint:** `GET /api/order-history`  
+- Fetches all order items along with their processing status.  
 
 
 
