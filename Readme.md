@@ -645,3 +645,24 @@ In these milestones, I've worked on integrating PayPal as a payment option. I se
   - **Online Payment via PayPal**  
 - Dynamically displayed the **PayPal payment button** when the user selected the **Online Payment** option 
 
+
+# Milestone 31  
+
+## Overview  
+In this milestone, I've made updates to the frontend by integrating Redux for managing user email state after login. This ensures that the email is stored in Redux state and can be accessed globally across the application.  
+
+## What I've Done  
+
+###  Implemented Redux State Management for User Email  
+- Added an **action** in Redux to update the email state when a user logs in.  
+- Created a **Redux slice** with an initial state containing the email and a reducer to handle email updates.  
+- Configured the **Redux store** to include the newly created user slice.  
+
+###  Updated Login Functionality to Store Email in Redux  
+- Integrated **Redux** in the login component by dispatching the email to Redux state after a successful login.  
+- Retrieved **user credentials** from the login form and updated Redux state accordingly.  
+- Stored the **authentication token** in `localStorage` for session management.  
+- Ensured that the **email state persists** throughout the application for future use.  
+
+These updates improve **state management** and allow the application to track user login details efficiently using Redux. 🚀  
+
