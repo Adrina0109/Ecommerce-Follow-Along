@@ -1,7 +1,11 @@
 import axios from "axios";
 import { useState } from 'react';
 import {Link,useNavigate} from "react-router-dom";
+import {useDispatch} from 'react-redux';
+import {setUserEmail} from "../../Redux/User/UserActions"
+import {setEmail} from "../../Redux/User/UsersSlice"
 function Login() {
+  const dispatch=useDispatch();
   const [credentials, setCreds] = useState({
     email: '',
     password: '',
@@ -20,6 +24,8 @@ function Login() {
   const handleClickLogin = async (e) => {
     e.preventDefault();
     const response= await axios.post("http://localhost:8080/user/login", credentials);
+    console.log(credentials);
+    dispatch(setUserEmail(credentials.email))
     localStorage.setItem("token", response.data.token);
     console.log(response)
     navigate("/");
