@@ -643,5 +643,5 @@ In these milestones, I've worked on integrating PayPal as a payment option. I se
 - Added **radio buttons** for users to choose between:  
   - **Cash on Delivery (COD)**  
   - **Online Payment via PayPal**  
-- Dynamically displayed the **PayPal payment button** when the user selected the **Online Payment** option.  
+- Dynamically displayed the **PayPal payment button** when the user selected the **Online Payment** option 
 
