@@ -623,5 +623,25 @@ In this milestone, I worked on handling order processing by receiving product de
 
 
 
+# Milestone 29 & 30  
 
+## Overview  
+In these milestones, I've worked on integrating PayPal as a payment option. I set up a PayPal Developer Account, retrieved necessary credentials, and implemented UI elements to allow users to select their preferred payment method.  
+
+
+### Set Up PayPal Developer Account  
+- Created a PayPal Developer Account.  
+- Logged into the PayPal Developer Dashboard.  
+- Accessed the **Sandbox Accounts** section.  
+- Retrieved and saved the **Sandbox User ID** for testing purposes.  
+
+### Retrieved PayPal API Credentials  
+- Located the **Sandbox Account** in the PayPal Developer Dashboard.  
+- Copied and securely stored the **Client ID** needed for API integration.  
+
+### Implemented Payment Options in UI  
+- Added **radio buttons** for users to choose between:  
+  - **Cash on Delivery (COD)**  
+  - **Online Payment via PayPal**  
+- Dynamically displayed the **PayPal payment button** when the user selected the **Online Payment** option.  
 
