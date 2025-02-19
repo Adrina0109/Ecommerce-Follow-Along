@@ -664,5 +664,19 @@ In this milestone, I've made updates to the frontend by integrating Redux for ma
 - Stored the **authentication token** in `localStorage` for session management.  
 - Ensured that the **email state persists** throughout the application for future use.  
 
-These updates improve **state management** and allow the application to track user login details efficiently using Redux. 🚀  
+These updates improve **state management** and allow the application to track user login details efficiently using Redux.   
 
+# Milestone 32  
+
+## Overview  
+In this milestone, I made minor updates to Redux state usage in multiple files. Specifically, I added a `useSelector` statement to retrieve user data from Redux and log it to the console.  
+
+### Features  
+
+- **Redux State Access**  
+  - Added `useSelector` to retrieve `state.user` in `CartPage.jsx`, `HomePage.jsx`, and a few other files.  
+
+- **ProfileCard.jsx Update**  
+  - Imported `useSelector` from `react-redux`.  
+  - Retrieved user data using `useSelector(state => state.user)`.  
+  - Logged the retrieved data to the console.  

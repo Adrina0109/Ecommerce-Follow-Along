@@ -15,6 +15,8 @@ function ProductEntryPage()
     category: '',
   });
 
+  const data = useSelector((state)=> state.user);
+
   const [errorInput, setInputError] = useState('');
   const [Images, setImages] = useState(null);
 

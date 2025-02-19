@@ -3,6 +3,7 @@ import axios from "axios";
 import AddressList from "../components/AdressComp/AllAdress/Addresses"
 export default function  SelectAddress() {
     const [AllAddresses, setAllAddresses]= useState([]);
+    const data = useSelector((state)=> state.user);
     useEffect(()=>{
         const fetchAddress=async()=>{
             const token =localStorage.getItem('token');

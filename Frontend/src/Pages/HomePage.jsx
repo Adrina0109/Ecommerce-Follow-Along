@@ -3,6 +3,7 @@ import Card from "../components/ProductCard/Card.jsx";
 import axios from "axios";
 import {Link} from "react-router-dom"
 function HomePage() {
+  const dataRedux = useSelector((state)=> state.user)
   const [data, setdata] = useState([]);
   // new Array(20).fill({ title: 'Product Title' })
   const fetchProduct = async () => {

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 function CardPage() {
   const [UsersCartData, setUsersCartData] = useState([]);
-
+  const data = useSelector((state)=> state.user);
   useEffect(() => {
     const getCartData = async () => {
       const token = localStorage.getItem('token');
