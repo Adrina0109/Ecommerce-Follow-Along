@@ -680,3 +680,21 @@ In this milestone, I made minor updates to Redux state usage in multiple files. 
   - Imported `useSelector` from `react-redux`.  
   - Retrieved user data using `useSelector(state => state.user)`.  
   - Logged the retrieved data to the console.  
+
+
+# Milestone 33  
+
+## Overview  
+In this milestone, I made updates to authentication handling in the backend and Redux state usage in the frontend.  
+
+### Backend Updates  
+- **Updated `userController.js` (Login Functionality)**  
+  - Modified the `login` function to set a `token` cookie in the response.  
+  - Added `httpOnly`, `secure`, and `sameSite: 'Strict'` properties for better security.  
+
+### Frontend Updates  
+- **Updated `HomePage.jsx`**  
+  - Added `useSelector` import from `react-redux`.  
+  - Retrieved user data from Redux state using `useSelector(state => state.user)`.  
+
+These changes enhance authentication security and improve state management in the application. 
