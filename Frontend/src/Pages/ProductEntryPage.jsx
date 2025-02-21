@@ -84,7 +84,7 @@ function ProductEntryPage()
     const token = localStorage.getItem('token');
     await axios
     .post(
-      `http://localhost:8080/product/create-product?token=${token}`,
+      `https://ecommerce-follow-along-dwdh.onrender.com/product/create-product?token=${token}`,
       formDataBody,
       {
         headers: {

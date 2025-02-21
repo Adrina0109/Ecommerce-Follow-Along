@@ -61,7 +61,7 @@ const Signup = () => {
     formDataBody.append("name",formData.name);
     formDataBody.append("file",formData.file);
     try{
-      await axios.post("http://localhost:8080/user/signup" , formDataBody,{
+      await axios.post("https://ecommerce-follow-along-dwdh.onrender.com/user/signup" , formDataBody,{
         headers:{
           "Content-Type": "multipart/form-data"
       },

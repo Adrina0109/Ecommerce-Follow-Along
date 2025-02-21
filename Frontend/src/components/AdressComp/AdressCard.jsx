@@ -26,7 +26,7 @@ const AddressCard = () => {
     }
 
     const response = await axios.post(
-      `http://localhost:8080/user/add-address?token=${token}`,
+      `https://ecommerce-follow-along-dwdh.onrender.com/user/add-address?token=${token}`,
       addressData
     );
     navigate('/profile');

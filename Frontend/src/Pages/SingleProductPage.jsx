@@ -12,7 +12,7 @@ function SinglePageProduct()
     const [selectedImage, setSelectedImage]=useState(0);
     useEffect(()=>{
         const getProductSingleDetails= async()=>{
-            const response = await axios.get(`http://localhost/product/get-single/${id}`
+            const response = await axios.get(`https://ecommerce-follow-along-dwdh.onrender.com/product/get-single/${id}`
 
             );
             console.log(response);

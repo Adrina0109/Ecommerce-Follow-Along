@@ -8,7 +8,7 @@ function Card({ title, Index, image, description, discountedPrice, originalPrice
     const token = localStorage.getItem('token');
     try {
       const response = await axios.post(
-        `http://localhost:8080/cart/add-to-cart?token=${token}`,
+        `https://ecommerce-follow-along-dwdh.onrender.com/cart/add-to-cart?token=${token}`,
         { productId: id, quantity: 1 }
       );
       console.log('Product Added To Cart Successfully...');
