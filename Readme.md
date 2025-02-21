@@ -708,3 +708,10 @@ I implemented JSON Web Token (JWT) for secure communication between the client a
 - **JWT Authentication:** Used JWT for user login and to protect API endpoints.  
 - **Cookie Storage:** Stored JWT securely in cookies for session management.  
 - **Client-Server Communication:** Ensured all requests between the client and server include the JWT for authentication. 
+
+
+# Milestone 35:
+
+Backend Deployment Link: https://ecommerce-follow-along-dwdh.onrender.com
+
+Frontend Deployment Link: ecomfro.netlify.app
