@@ -698,3 +698,13 @@ In this milestone, I made updates to authentication handling in the backend and 
   - Retrieved user data from Redux state using `useSelector(state => state.user)`.  
 
 These changes enhance authentication security and improve state management in the application. 
+
+# Milestone 34: JWT Authentication
+
+## Overview
+I implemented JSON Web Token (JWT) for secure communication between the client and the server during user authentication.
+
+## Key Features
+- **JWT Authentication:** Used JWT for user login and to protect API endpoints.  
+- **Cookie Storage:** Stored JWT securely in cookies for session management.  
+- **Client-Server Communication:** Ensured all requests between the client and server include the JWT for authentication. 
