@@ -28,7 +28,7 @@ export function ProfileCard() {
       return alert('Token missing login');
     }
     const response = await axios.get(
-      `http://localhost:8080/user/user-data?token=${token}`
+      `https://ecommerce-follow-along-dwdh.onrender.com/user/user-data?token=${token}`
     );
     const data = useSelector((state) => state.user);
     console.log(data);

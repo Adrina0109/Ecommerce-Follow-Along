@@ -9,7 +9,7 @@ function HomePage() {
   // new Array(20).fill({ title: 'Product Title' })
   const fetchProduct = async () => {
     const response = await axios.get(
-      'http://localhost:8080/product/get_product'
+      'https://ecommerce-follow-along-dwdh.onrender.com/product/get_product'
     );
     setdata(response.data.data);
   };
@@ -25,7 +25,7 @@ function HomePage() {
   console.log(data);
   const handleDelete = async (id) => {
     console.log('id', id);
-    const data = await axios.delete(`http://localhost:8080/product/${id}`);
+    const data = await axios.delete(`https://ecommerce-follow-along-dwdh.onrender.com/product/${id}`);
     setdata(data.data.data);
   };
   return (

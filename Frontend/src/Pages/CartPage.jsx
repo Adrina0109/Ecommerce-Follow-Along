@@ -12,7 +12,7 @@ function CardPage() {
       if (!token) {
         return alert('Token is missing, please');
       }
-      const response = await axios.get(`http://localhost:8080/cart/get-user-cart-data?token=${token}`);
+      const response = await axios.get(`https://ecommerce-follow-along-dwdh.onrender.com/cart/get-user-cart-data?token=${token}`);
       console.log(response);
       setUsersCartData(response.data.cartData);
     };

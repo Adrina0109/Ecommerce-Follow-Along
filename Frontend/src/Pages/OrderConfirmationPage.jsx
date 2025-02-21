@@ -16,7 +16,7 @@ export default function OrderConfirmation() {
         return alert('Token is missing,Please logi');
       }
       const response = await axios.get(
-        `http://localhost:8080/cart/get-user-cart-data?token=${token}`
+        `https://ecommerce-follow-along-dwdh.onrender.com/cart/get-user-cart-data?token=${token}`
       );
 
       let sum = 0;
@@ -37,7 +37,7 @@ export default function OrderConfirmation() {
       return alert('Token is missing,Please signup');
     }
     const response = await axios.post(
-      `http://localhost:8080/orders/confirm-order?token=${token}`,
+      `https://ecommerce-follow-along-dwdh.onrender.com/orders/confirm-order?token=${token}`,
       {
         Items: cartData,
         address: userAddress,

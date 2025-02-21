@@ -82,7 +82,7 @@ function UpdateForm()
     console.log(formDataBody);
 
     let requestdata = await axios.put(
-      `http://localhost:8080/product/update-products/${id}`,
+      `https://ecommerce-follow-along-dwdh.onrender.com/product/update-products/${id}`,
       formDataBody,
       {
         headers: {
@@ -115,7 +115,7 @@ function UpdateForm()
   {
     const getData = async () => 
       {
-      const singleData = await axios.get(`http://localhost:8080/product/get-single/${id}`);
+      const singleData = await axios.get(`https://ecommerce-follow-along-dwdh.onrender.com/product/get-single/${id}`);
       console.log(singleData);
       setFormData(singleData.data.data);
       setImages(singleData.data.images);
